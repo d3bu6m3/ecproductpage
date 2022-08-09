@@ -22,8 +22,13 @@ function plusLightbox(n) {
     showLightbox(lightboxIndex += n);
 }
 
+function currentLightbox(n) {
+    showLightbox(lightboxIndex = n);
+}
+
 function showLightbox(n) {
     let lightboxThumbs = document.getElementsByClassName('lightbox-thumb');
+    let lightboxThumbsSmall = document.getElementsByClassName('lightbox-thumb-s');
     let i;
 
     if (n > lightboxThumbs.length ) {
@@ -35,5 +40,9 @@ function showLightbox(n) {
     for (i = 0; i < lightboxThumbs.length; i++) {
         lightboxThumbs[i].style.display = "none";
     }
+    for (i = 0; i < lightboxThumbsSmall.length; i++) {
+        lightboxThumbsSmall[i].className = lightboxThumbsSmall[i].className.replace(" active", "");
+    }
     lightboxThumbs[lightboxIndex-1].style.display="block";
+    lightboxThumbsSmall[lightboxIndex-1].className += " active";
 }

@@ -675,6 +675,7 @@ nav {
         margin-bottom: 10px;
     }
         .lightbox-thumb img {
+            border-radius: 10px;
             height: 23.375rem;
             width: 23.375rem;
             opacity: 0.9;
@@ -698,6 +699,17 @@ nav {
         justify-content: space-evenly;
     }
         .lightbox-thumb-s {
+            border-radius: 10px;
             width: 70px;
             height: 70px;
+            cursor: pointer;
+            position: relative;
+        }
+        .lightbox-thumb-s::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            opacity: 0.5;
+            z-index: 1;
         }
