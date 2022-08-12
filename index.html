@@ -35,7 +35,7 @@
           <a href="#">Contact</a>
         </div>
         <div class="header-user">
-          <a href="#" class="user-cart" data-totalitems="1">
+          <a href="#" class="user-cart" data-totalitems="0">
             <img src="images/icon-cart.svg" alt="cart"/>
           </a>
           <a href="#" class="user-avatar">
@@ -135,10 +135,10 @@
             <div class="gallery-quantity">
               <div class="quantity-wrap container-padd">
                 <a class="minus">-</a>
-                <p class="quantity">0</p>
+                <input type=number class="quantity" value="1">
                 <a class="add">+</a>
               </div>
-              <button class="button" onclick="addToCart()"><img src="images/icon-cart-light.svg" alt="cart"/> Add to cart</button>
+              <button id="addToCartBtn" class="button"><img src="images/icon-cart-light.svg" alt="cart"/> Add to cart</button>
             </div>  
           </div>
         </div>

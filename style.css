@@ -52,6 +52,14 @@ button:hover, .button:hover {
     cursor: pointer;
     opacity: 0.7;
 }
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 /**
 *   Helper Class
 */
@@ -251,7 +259,7 @@ nav {
     .header-user .user-cart:hover {
         transform: scale(1.2);
     }
-    .header-user .user-cart::before {
+    .header-user .your-cart::before {
         content: attr(data-totalitems);
         background-color: var(--orange);
         border-radius: 60px;
@@ -363,10 +371,10 @@ nav {
                 transform: scale(1.1);
             }
             .cart-item .item-details {
-                padding: 10px;
+                padding: 20px;
                 grid-area: description;
             }
-                .item-price span {
+                .item-price .order-total {
                     color: black;
                     font-weight: bold;
                 }
@@ -629,8 +637,11 @@ nav {
                     }
                 }
                     .quantity {
+                        border: none;
+                        background-color: var(--lightgblue);
                         color: black;
                         font-weight: bold;
+                        width: 40px;
                     }
                     .add, .minus {
                         color: var(--orange);
